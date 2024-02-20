@@ -1,0 +1,54 @@
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative; /* Add this line to allow absolute positioning */
+    border-bottom: 2px solid hsl(0, 0%, 0%); /* Add this line to create the border */
+}
+
+ul.navbar li {
+    float: right;
+}
+
+ul.navbar li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative; /* Add this line to allow absolute positioning */
+}
+
+ul.navbar li a:hover {
+    background-color: hsla(0, 0%, 0%, 0.192);
+    z-index: 1; /* Add this line to ensure the hover is above the border */
+}
+
+ul.navbar li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: hsl(0, 0%, 0%); /* Set the color of the overlapping border */
+    transform: scaleX(0); /* Initially set to zero width */
+}
+
+ul.navbar li a:hover::before {
+    transform: scaleX(1); /* Expand to full width on hover */
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
