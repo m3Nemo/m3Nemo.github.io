@@ -62,3 +62,16 @@ function emoteAnimation(duration) {
     }
     updateEmote(); // Start the animation
 }
+
+window.addEventListener('scroll', function() {
+
+    var scroll = window.scrollY;
+    var arrowIcon = document.getElementById("arrowIcon");
+
+    if(scroll > 0) {
+        arrowIcon.style.opacity = 0;
+    } else {
+        arrowIcon.style.opacity = 1;
+
+    }
+});
