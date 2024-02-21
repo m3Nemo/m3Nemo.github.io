@@ -1,10 +1,10 @@
 ul.navbar {
     list-style-type: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
-    position: relative; /* Add this line to allow absolute positioning */
-    border-bottom: 2px solid hsl(0, 0%, 0%); /* Add this line to create the border */
+    position: sticky; 
+    top: 2em;
+    z-index: 0;
 }
 
 ul.navbar li {
@@ -13,44 +13,28 @@ ul.navbar li {
 
 ul.navbar li a {
     display: block;
-    color: #333;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     position: relative; /* Add this line to allow absolute positioning */
     font-weight: bold;
-    
+    border: 2px solid hsl(0, 0%, 0%);
 }
 
 ul.navbar li a:hover {
-    background-color: hsla(0, 0%, 0%, 0.192);
-    z-index: 1; /* Add this line to ensure the hover is above the border */
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
-ul.navbar li a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: hsl(0, 0%, 0%); /* Set the color of the overlapping border */
-    transform: scaleX(0); /* Initially set to zero width */
-}
-
-ul.navbar li a.selected::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: hsl(0, 0%, 0%);
-    transform: scaleX(1);
+body{
+    font-family: monospace;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
 }
 
 .selected {
-    background-color:hsla(0, 0%, 0%, 0.192)
+    border: 2px solid hsl(0, 0%, 100%) !important;
 }
 
 ul.navbar li a:hover::before {
@@ -71,7 +55,7 @@ ul.navbar li a:hover::before {
 }
 
 .title {
-    font-size: 4em;
+    font-size: 8em;
     font-weight: bold;
     margin-bottom: 0.25em;
     padding: 0;
@@ -79,22 +63,25 @@ ul.navbar li a:hover::before {
 }
 
 .subtitle {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 0.125em;
     padding: 0;
     text-align: left;
 }
 
 .contentSection {
-    width: 60%;
-    margin: 0 auto;
-    padding: 1em;
+    margin: 0 10%;
     border-radius: 1em;
+}
+
+.titleSection {
+    overflow: hidden;
+    height: 50vh;
 }
 
 .vcontainer {
     margin: 4% auto;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -114,7 +101,21 @@ ul.navbar li a:hover::before {
     margin: 1%;
 }
 
-.hcontainer-cell {
+.hcontainer-cell-right {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    justify-content: right;
+}
+
+.hcontainer-cell-left {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    justify-content: left;
+}
+
+.hcontainer-cell-center {
     display: flex;
     flex-direction: row;
     margin: 1%;
@@ -136,6 +137,7 @@ ul.navbar li a:hover::before {
     width: 100%;
     height: auto;
     border-radius: 1em;
+    filter: grayscale(1);
 }
 
 .blackBox {
@@ -149,4 +151,12 @@ ul.navbar li a:hover::before {
 
 .hidden {
     display: none;
+}
+
+.frame {
+    margin: 0 5em;
+}
+
+.space {
+    margin-top: 10%;
 }

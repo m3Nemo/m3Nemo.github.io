@@ -4,48 +4,51 @@
     <title>m3Nemo personal website</title>
     <link rel="stylesheet" href="/styles.css">
     <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
 </head>
-<body>
+<body class="blackBox">
     <ul class="navbar">
-        <heading class="heading2">My Website</heading>
+        <heading class="heading2 emote">^.^</heading>
         <li><a class="selected" id="HomeLink" href="#home" onclick="handleLinkNav('Home')">Home</a></li>
         <li><a id="AboutLink" href="#about" onclick="handleLinkNav('About')">About</a></li>
         <li><a id="ContactLink" href="#contact" onclick="handleLinkNav('Contact')">Contact</a></li>
     </ul>
     
-    <div class="vcontainer">
-        <div class="vcontainer-cell">
-            <heading class="title">Willkommen auf meiner Seite</heading>
-            <heading class="subtitle">Hallo ich bin Daniel.</heading>
-        </div>
+
+    <div class="titleSection space frame">
+            <div class="vcontainer-cell">
+                <heading class="title typed-title"></heading>
+                <heading class="subtitle typed-subtitle"></heading>
+            </div>
     </div>
+
    
-    <div class="contentSection blackBox active" id="Home">
+    <div class="contentSection active frame" id="Home">
         <div class="hcontainer alignTop">
-            <div class="hcontainer-cell twoColumns">
+            <div class="hcontainer-cell-left twoColumns">
                 <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
             </div>
             <div class="vcontainer-cell twoColumns">
                 <heading class="heading1">Home</heading>
-                <p class="infotext">Ich bin <b>Weichwareentwickler</b> und habe eine Katze.</p>
+                <p class="infotext">Ich bin <b>Weichwarenentwickler</b> und habe eine Katze.</p>
             </div>
         </div>
     </div>
-    <div class="contentSection blackBox hidden" id="About">
+    <div class="contentSection hidden frame" id="About">
         <div class="hcontainer alignTop">
-            <div class="hcontainer-cell twoColumns">
-                <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
-            </div>
             <div class="vcontainer-cell twoColumns">
                 <heading class="heading1">About Me</heading>
                 <p class="infotext">Ich spiele gerne <b>Geige</b> und trage eine Glatze.</p>
             </div>
+            <div class="hcontainer-cell-right twoColumns">
+                <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
+            </div>
         </div>
     </div>
-    <div class="contentSection blackBox hidden" id="Contact">
+    <div class="contentSection hidden frame" id="Contact">
         <div class="hcontainer alignTop">
-            <div class="hcontainer-cell twoColumns">
+            <div class="hcontainer-cell-left twoColumns">
                 <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
             </div>
             <div class="vcontainer-cell twoColumns">
