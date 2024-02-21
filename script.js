@@ -46,13 +46,6 @@ function emoteAnimation(duration) {
     var index = 0;
     var clear = false;
 
-    setTimeout(() => {
-        clear = true;
-        setTimeout(() => {
-            emote.textContent = "°˽°";
-        }, 200);
-    }, duration);
-
     function updateEmote() {
         emote.textContent = emoteList[index];
         index = (index + 1) % emoteList.length;
@@ -60,18 +53,26 @@ function emoteAnimation(duration) {
             setTimeout(updateEmote, 75);
         }
     }
+
+    setTimeout(() => {
+        clear = true;
+        setTimeout(() => {
+            emote.textContent = "°˽°";
+        }, 200);
+    }, duration);
+
     updateEmote(); // Start the animation
 }
 
-window.addEventListener('scroll', function() {
-
-    var scroll = window.scrollY;
-    var arrowIcon = document.getElementById("arrowIcon");
-
-    if(scroll > 0) {
+function handleArrowVisibility(arrowIcon) {
+    if(window.scrollY > 0) {
         arrowIcon.style.opacity = 0;
     } else {
         arrowIcon.style.opacity = 1;
-
     }
+}
+
+window.addEventListener('scroll', function() {
+    var arrowIcon = document.getElementById("arrowIcon");
+    handleArrowVisibility(arrowIcon);
 });
