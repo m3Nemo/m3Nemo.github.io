@@ -60,6 +60,5 @@ function emoteAnimation(duration) {
             setTimeout(updateEmote, 75);
         }
     }
-
     updateEmote(); // Start the animation
 }
