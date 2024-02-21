@@ -1,14 +1,25 @@
-ul.navbar {
-    list-style-type: none;
+* {
+    margin: 0;
     padding: 0;
-    overflow: hidden;
-    position: sticky; 
-    top: 2em;
-    z-index: 0;
+    box-sizing: border-box;
 }
 
-ul.navbar li {
-    float: right;
+ul.navbar {
+    list-style-type: none;
+    padding-top: 2em;
+    position: sticky; 
+    top: 0em;
+    z-index: 1;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    position: fixed;
+    top: 2em;
+    right: -14em;
 }
 
 ul.navbar li a {
@@ -20,6 +31,7 @@ ul.navbar li a {
     position: relative; /* Add this line to allow absolute positioning */
     font-weight: bold;
     border: 2px solid hsl(0, 0%, 0%);
+    background-color: black;
 }
 
 ul.navbar li a:hover {
@@ -33,7 +45,7 @@ body{
 }
 
 .selected {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 100%) !important;
     color: hsl(0, 0%, 0%) !important;
     border: 2px solid hsl(0, 0%, 100%) !important;
 
@@ -46,7 +58,7 @@ ul.navbar li a:hover::before {
 .heading1 {
     font-size: 3em;
     font-weight: bold;
-    margin: 0;
+    margin-bottom: 1em;
     padding: 0;
 }
 
