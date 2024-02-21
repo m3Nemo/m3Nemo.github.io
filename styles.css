@@ -23,8 +23,7 @@ ul.navbar li a {
 }
 
 ul.navbar li a:hover {
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(0, 0%, 0%);
+    border: 2px solid hsl(0, 0%, 100%) !important;
 }
 
 body{
@@ -34,7 +33,10 @@ body{
 }
 
 .selected {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%) !important;
     border: 2px solid hsl(0, 0%, 100%) !important;
+
 }
 
 ul.navbar li a:hover::before {
