@@ -97,10 +97,27 @@ ul.navbar li a:hover::before {
     flex-direction: row;
 }
 
-.vcontainer-cell {
+.vcontainer-cell-center {
     display: flex;
     flex-direction: column;
     margin: 1%;
+    justify-content: center;
+    text-align: center;
+}
+
+.vcontainer-cell-left {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    justify-content: left;
+}
+
+.vcontainer-cell-right {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    justify-content: right;
+    text-align: right;
 }
 
 .hcontainer-cell-right {
@@ -108,6 +125,7 @@ ul.navbar li a:hover::before {
     flex-direction: row;
     margin: 1%;
     justify-content: right;
+    text-align: right;
 }
 
 .hcontainer-cell-left {
@@ -122,13 +140,13 @@ ul.navbar li a:hover::before {
     flex-direction: row;
     margin: 1%;
     justify-content: center;
+    text-align: center;
 }
 
 .infotext {
     font-size: 1.5em;
     margin-bottom: 1em;
     padding: 0;
-    text-align: left;
 }
 
 .twoColumns {
