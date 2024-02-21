@@ -214,3 +214,20 @@ ul.navbar li a:hover::before {
 .emote {
     font-size: 35px;
 }
+
+.projectCard {
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1.5em 2em;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 10px 0 hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 0%);
+    text-align: left;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.projectCard:hover {
+    transform: scale(1.02);
+    transition: transform 100ms ease-in-out;
+}
