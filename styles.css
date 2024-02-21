@@ -223,8 +223,9 @@ ul.navbar li a:hover::before {
     box-shadow: 0 0 10px 0 hsl(0, 0%, 0%);
     color: hsl(0, 0%, 0%);
     text-align: left;
-    font-size: 1.5em;
+    font-size: 2.6vh;
     cursor: pointer;
+    width: 58%;
 }
 
 .projectCard:hover {
