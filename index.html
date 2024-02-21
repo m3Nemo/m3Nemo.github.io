@@ -10,9 +10,11 @@
 <body class="blackBox">
     <ul class="navbar">
         <heading class="heading2 emote">^.^</heading>
-        <li><a class="selected" id="HomeLink" href="#home" onclick="handleLinkNav('Home')">Heim</a></li>
-        <li><a id="AboutLink" href="#about" onclick="handleLinkNav('About')">Über</a></li>
-        <li><a id="ContactLink" href="#contact" onclick="handleLinkNav('Contact')">Kontakt</a></li>
+        <div class="nav-links">
+            <li><a class="selected" id="HomeLink" href="#home" onclick="handleLinkNav('Home')">Heim</a></li>
+            <li><a id="AboutLink" href="#about" onclick="handleLinkNav('About')">Über</a></li>
+            <li><a id="ContactLink" href="#contact" onclick="handleLinkNav('Contact')">Kontakt</a></li>
+        </div>
     </ul>
     
 
@@ -31,7 +33,6 @@
             </div>
             <div class="vcontainer-cell-right twoColumns">
                 <heading class="heading1">Heim</heading>
-                <p class="infotext">Ich bin <b>Weichwarenentwickler</b> und habe eine Katze.</p>
             </div>
         </div>
     </div>
@@ -39,7 +40,11 @@
         <div class="hcontainer alignTop">
             <div class="vcontainer-cell-left twoColumns">
                 <heading class="heading1">Über mich?</heading>
+                <p class="infotext">Ich bin <b>Weichwarenentwickler</b> und habe eine Katze.</p>
                 <p class="infotext">Ich spiele gerne <b>Geige</b> und trage eine Glatze.</p>
+                <p class="infotext">Mit JavaScript wird sich bedient,</p>
+                <p class="infotext">ins Orchester dann, wohl verdient.</p>
+
             </div>
             <div class="hcontainer-cell-right twoColumns">
                 <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
