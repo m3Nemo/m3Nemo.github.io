@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function emoteAnimation(duration) {
     var emote = document.querySelector('.emote');
-    var emoteList = ["^_^", "^̮ ^", "^̥ ^"];
+    var emoteList = ["^=^", "^-^" , "^≈^", "^o^", "^-^" ];
     var index = 0;
     var clear = false;
 
@@ -50,14 +50,14 @@ function emoteAnimation(duration) {
         emote.textContent = emoteList[index];
         index = (index + 1) % emoteList.length;
         if(clear === false) {
-            setTimeout(updateEmote, 75);
+            setTimeout(updateEmote, 100);
         }
     }
 
     setTimeout(() => {
         clear = true;
         setTimeout(() => {
-            emote.textContent = "°˽°";
+            emote.textContent = "°-°";
         }, 200);
     }, duration);
 
