@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-    .title {
-        font-size: 15vw;
-    }
-}
-
 ul.navbar {
     list-style-type: none;
     padding-top: 2em;
@@ -237,4 +231,22 @@ ul.navbar li a:hover::before {
 .projectCard:hover {
     transform: scale(1.02);
     transition: transform 100ms ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 25vw;
+    }
+
+    .subtitle {
+        font-size: 15vw;
+        transform: rotate(90deg);
+        transform-origin: left bottom;
+        width: 170%;
+        position: relative;
+    }
+
+    .titleSection {
+        height: 88vh;
+    }
 }
