@@ -11,7 +11,7 @@
     <ul class="navbar">
         <heading class="heading2 emote">^.^</heading>
         <div class="nav-links">
-            <li><a class="selected" id="HomeLink" href="#home" onclick="handleLinkNav('Home')">Heim</a></li>
+            <li><a class="selected" id="HomeLink" href="#home" onclick="handleLinkNav('Home')">Projekte</a></li>
             <li><a id="AboutLink" href="#about" onclick="handleLinkNav('About')">Über</a></li>
             <li><a id="ContactLink" href="#contact" onclick="handleLinkNav('Contact')">Kontakt</a></li>
         </div>
@@ -30,17 +30,35 @@
 
    
     <div class="contentSection active frame" id="Home">
-        <div class="hcontainer alignTop">
-            <div class="hcontainer-cell-left twoColumns">
-                <img class="image" src="/media/profile.jpg" alt="Paris" style="width:50%">
-            </div>
-            <div class="vcontainer-cell-right twoColumns">
-                <heading class="heading1">Heim</heading>
-                <div class = "projectCard" onclick="{window.location.href = 'https://github.com/m3Nemo/m3Nemo.github.io';}">
+        <heading class="heading1 sectionHeading">Projekte</heading>
+        <div class="hcontainer alignTop cardSection">
+            <div class = "projectCard" onclick="{window.location.href = 'https://github.com/m3Nemo/m3Nemo.github.io';}">
+                <img class="projectImage" src="/media/globe-outline.svg">
+                <div class="projectCardSection">
                     <heading class="heading2">Personal Page</heading>
-                    <p class="">Meine Webstie, inspiriert von anderen coolen Websites.</p>
+                    <p class="">Meine Website, inspiriert von anderen coolen Websites. Powered by me.</p>
                 </div>
-
+            </div>
+            <div class = "projectCard" onclick="{window.location.href = '#fancyproject';}">
+                <img class="projectImage" src="/media/bulb-outline.svg">
+                <div class="projectCardSection">
+                    <heading class="heading2">Fancy Project</heading>
+                    <p class="">Ein fancy Projekt, gerade dabei ist, aus dem Ei zu schlüpfen. </p>
+                </div>
+            </div>
+            <div class = "projectCard" onclick="{window.location.href = '#crazyproject';}">
+                <img class="projectImage" src="/media/construct-outline.svg">
+                <div class="projectCardSection">
+                    <heading class="heading2 textMargin">Crazy Projekt</heading>
+                    <p class="">Ein crazy Projekt, welches bislang nicht das Licht der Welt erblicken durfte.</p>
+                </div>
+            </div>
+            <div class = "projectCard" onclick="{window.location.href = '#crazyproject';}">
+                <img class="projectImage" src="/media/construct-outline.svg">
+                <div class="projectCardSection">
+                    <heading class="heading2 textMargin">Super Projekt</heading>
+                    <p class="">Ein super Projekt, welches noch dabei ist, seine Kräfte aufzuladen.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -69,4 +87,5 @@
     </div>
 
 </body>
+<footer></footer>
 </html>
