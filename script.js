@@ -19,50 +19,56 @@ function toggleSection(goTo) {
     navigateTo.classList.add("active");
 }
 
-function typingAnimation(className ,text, speed, delay) {
+function typingAnimation(className ,text, animator, speed, delay) {
 
     var options = {
         strings: [text],
         typeSpeed: speed || 50,
         showCursor: false,
         loop: false,
-        startDelay: delay || 0
+        startDelay: delay || 0,
+        preStringTyped: function(self) {animator.start()},
+        onStringTyped: function(self) {animator.pause()}
     };
 
     var typed = new Typed(`.${className}`, options);
 }
 document.addEventListener('DOMContentLoaded', function() {
-    emoteAnimation(600);
-    setTimeout(() => {
-        emoteAnimation(1800);
-    }, 1300);
-    typingAnimation("typed-title" ,"Hallo" , 75);
-    typingAnimation("typed-subtitle" ,"Ich bin Daniel.", 75, 1300);
+    var animator = new EmoteAnimator();
+    typingAnimation("typed-title" ,"Hallo", animator, 75);
+    typingAnimation("typed-subtitle" ,"Ich bin Daniel.", animator, 75, 1300);
 });
 
-function emoteAnimation(duration) {
-    var emote = document.querySelector('.emote');
-    var emoteList = ["^=^", "^-^" , "^≈^", "^o^", "^-^" ];
-    var index = 0;
-    var clear = false;
-
-    function updateEmote() {
-        emote.textContent = emoteList[index];
-        index = (index + 1) % emoteList.length;
-        if(clear === false) {
-            setTimeout(updateEmote, 100);
-        }
+class EmoteAnimator {
+    constructor() {
+        this.emote = document.querySelector('.emote');
+        this.emoteList = ["^=^", "^-^", "^≈^", "^o^", "^-^"];
+        this.index = 0;
+        this.run = true;
+        this.animationInterval = setInterval(() => {
+            if (this.run) {
+                this.updateEmote();
+            }
+        }, 100);
     }
 
-    setTimeout(() => {
-        clear = true;
-        setTimeout(() => {
-            emote.textContent = "°-°";
-        }, 200);
-    }, duration);
+    updateEmote() {
+        this.emote.textContent = this.emoteList[this.index];
+        this.index = (this.index + 1) % this.emoteList.length;
+    }
 
-    updateEmote(); // Start the animation
+    start() {
+        this.run = true;
+    }
+
+    pause() {
+        this.run = false;
+        setTimeout(() => {
+            this.emote.textContent = "°-°";
+        }, 200);
+    }
 }
+
 
 function handleArrowVisibility(arrowIcon) {
     if(window.scrollY > 0) {
