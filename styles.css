@@ -96,7 +96,7 @@ ul.navbar li a:hover::before {
 
 .titleSection {
     overflow: hidden;
-    height: 60vh;
+    height: 55vh;
 }
 
 .vcontainer {
@@ -209,8 +209,8 @@ ul.navbar li a:hover::before {
 }
 
 #arrowIcon {
-    width: 5em;
-    height: 5em;
+    width: 10vh;
+    height: 10vh;
     animation: bounce 3s infinite ease-in-out;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
