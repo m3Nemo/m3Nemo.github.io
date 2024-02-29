@@ -56,6 +56,10 @@ ul.navbar li a:hover::before {
     transform: scaleX(1); /* Expand to full width on hover */
 }
 
+.navbar {
+    height: 10vh;
+}
+
 .heading1 {
     font-size: 3em;
     font-weight: bold;
@@ -192,7 +196,7 @@ ul.navbar li a:hover::before {
 }
 
 .space {
-    margin-top: 10%;
+    margin-top: 20vh;
 }
 
 @keyframes bounce {
@@ -217,7 +221,7 @@ ul.navbar li a:hover::before {
 }
 
 .emote {
-    font-size: 35px;
+    font-size: 4.5vh;
 }
 
 .projectCard {
